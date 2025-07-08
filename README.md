@@ -1,8 +1,8 @@
-# TestRepository
+高校入試をアルゴリズムで解法
 
-Hello Repository
 
-hello world
+  ・対象　令和７年度数学問５
 
-  hello world2
-  
+  ・解法　面積を求め比較する問題なので次の方法で面積を計算する。
+
+          ヘロンの公式
