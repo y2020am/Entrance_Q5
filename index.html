@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset=""UTF-8">
+        <title>Q5_exam</title>
+        <link rel="stylesheet" href="styles.css" />
+       
+    </head>
+
+    <body>
+        <!-- Add HTML markup elements for your web site below -->
+        <h2>高校入試数学、アルゴリズムによる解法</h2>
+        　高校入試で出題された数学の問題を、プログラミングで解決する。今は図形の問題を取り挙げ、リアルタイムで計算を見える化し解法する。<p><p>
+        <h3>１．問題</h3>
+        　図1のように、点Pのx座標を-3、直線lとy軸との交点をCとし、m上の点でx座標が3である点をDとする。
+        また、x軸上を動かすことができる点Qをとり、原点から右の方向へ点Qを動かし、三角形ACQの面積が四角形ACODの面積の2倍となる点Qの座標を求める。<br>
+        <div align="right">(令和7年度茨城県入試問題より)</div>
+
+        <section>
+            <div class="container">
+            <div>
+                <figure>
+                <div id="box" class="jxgbox" style="width:600px; height:600px;"></div> 
+                <figcaption><center><font size="3">図１ 問題</font></center></figcaption>
+                </figure>
+            </div>
+            <div>
+                <h3>２．コンピュータによる解法</h3>
+                2.1 アルゴリズム<br>
+                <ul class=""nodot">
+                    <li>(1)三角形ACD、CODの面積をそれぞれ計算、加算しその面積を四角形ACODとする。</li>
+                    <li>(2)三角形ACQを計算する。(ただし始めのQのｘの座標は６.0とする。)</li>
+                    <li>(3)四角形ACODの面積の２倍の面積と三角形ACQの面積が等しければ終了。そうでなければQのｘの座標を0.1加算し(2)に戻る。</li>
+                        　但し三角形の面積の計算は「ヘロンの公式」を用いる。さらに四角形ACODの２倍の面積と三角形ACQの面積の比較精度は1/100とする。
+                </ul>
+            
+                <h3>３．実装</h3>
+                (1)三角形ACD、CODの面積をそれぞれ計算、加算してその四角形ACODを求める。<button id="button1">  面積の計算  </button>
+                <ul>
+                    <li>・三角形ACDの面積:&nbsp;&nbsp;<span id="acd"></span></li>
+                    <li>・三角形CODの面積:&nbsp;&nbsp;<span id="cod"></span></li>
+                    <li>・四角形ACODの面積(三角形ACD+三角形COD):&nbsp;&nbsp;<span id="acod"></span></li>
+                </ul>  
+                (2)三角形ACQを計算する。(ただし始めのQのｘの座標は６.0とする。)<button id="button2">  面積の計算  </button>
+                 <ul>
+                    <li>三角形ACQの面積:&nbsp;&nbsp;<span id="acq"></span></li>
+                </ul>
+            </div>
+        </section> 
+        (3)四角形ACOD➀の面積の２倍の面積と三角形ACQの面積②が等しければ終了。そうでなければQのｘの座標を0.1加算し(2)に戻る。
+        <button id="button3">シミュレーション</button><p>
+        <ul>
+            <li><div id="result"></div></li>
+        </ul>
+
+
+         <!--JSXGraph link-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraph.css" />
+        <script type="text/javascript" charset="UTF-8"  src="https://cdn.jsdelivr.net/npm/jsxgraph/distrib/jsxgraphcore.js" defer></script>
+         
+
+        <!-- JavaScriptの実行-->
+        <script type="text/javascript" src="script.js" defer></script> 
+
+
+
+    </body>
+</html>

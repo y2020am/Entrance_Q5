@@ -1,0 +1,8 @@
+/* Add CSS styles for your web site here and use them in index.html. */
+.container {
+  display: flex;
+}
+
+ul {
+  list-style-type: none;
+}
