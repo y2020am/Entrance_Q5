@@ -87,7 +87,7 @@ let d = [3, m(3)];
 // グラフの設定(jsxgraph: 変数の設定は var を用いる。)
 //
 var board = JXG.JSXGraph.initBoard('box', {
-    boundingbox:[-5,15,9,-3], 
+    boundingbox:[-4,15,8,-3], 
     axis:true,
     keepaspectratio: true
   }
